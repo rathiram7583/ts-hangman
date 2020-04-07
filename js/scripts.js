@@ -27,9 +27,15 @@ function letterCheck() {
             if (randomWords[i] == inputValue) {
                 answerCheck[i] = inputValue;
                 console.log(answerCheck);
+                // this.answer.textContent = answerCheck.join("");    
             }
             else {
-                this.wrongAnswer.innerHTML = "Wrong Answer";
+                if (count > 5) {
+                    this.wrongAnswer.innerHTML = "You Lose";
+                }
+                else {
+                    this.wrongAnswer.innerHTML = "Wrong Answer";
+                }
             }
         }
         count++;
